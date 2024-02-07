@@ -111,6 +111,11 @@ public class EBank implements Bank {
         interact.executeCommand();
     }
 
+    public void buyPremium(String email) {
+        interact.setCommand(new BuyPremiumCommand(email));
+        interact.executeCommand();
+    }
+
 
     public void clearData() {
         instance = null;

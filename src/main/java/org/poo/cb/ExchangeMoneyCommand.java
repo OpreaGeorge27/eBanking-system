@@ -23,7 +23,7 @@ public class ExchangeMoneyCommand implements Command {
         }
         Float transfer = EBank.getInstance().getExchanger().getExchangeValue(curr1, curr2, amount);
         curr2Acc.addMoney(amount);
-        if (curr1Acc.getCurrentValue() / 2 < transfer) {
+        if ((curr1Acc.getCurrentValue() / 2 < transfer) && !user.isPremium()) {
             curr1Acc.subMoney(0.01f * transfer);
             //aici nu stiu ce se intampla daca de exemplu clientul are 98EUR si transfera 98 nu e precizat in cerinta
         }

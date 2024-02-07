@@ -28,6 +28,7 @@ public class RecommandStocksCommand implements Command {
             SMAl /= 10.0f;
             if (SMAs > SMAl) {
                 recommanded.add(stock);
+                stock.setRecommended(true);
             }
         }
         EBank.getInstance().getJSONwriter().printRecStocks(recommanded);

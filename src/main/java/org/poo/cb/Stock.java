@@ -7,11 +7,13 @@ public class Stock {
     private Map<String, Float> history;
     private float amount;
     private float lastPrice;
+    private boolean isRecommended;
 
     public Stock(String name, Map<String, Float> history, float amount) {
         this.amount = amount;
         this.name = name;
         this.history = history;
+        this.isRecommended = false;
     }
 
     public void setLastPrice(float lastPrice) {
@@ -32,5 +34,13 @@ public class Stock {
 
     public Map<String, Float> getHistory() {
         return history;
+    }
+
+    public boolean isRecommended() {
+        return isRecommended;
+    }
+
+    public void setRecommended(boolean recommended) {
+        isRecommended = recommended;
     }
 }

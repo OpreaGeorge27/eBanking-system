@@ -12,6 +12,7 @@ public class User {
     private Map<String, User> friends;
     private Map<AccountType, Account> accounts;
     private Map<String, Stock> stocks;
+    private boolean isPremium;
 
 
     public User(String email, String firstName, String name, String address) {
@@ -22,6 +23,7 @@ public class User {
         this.friends = new LinkedHashMap<>();
         this.accounts = new LinkedHashMap<>();
         this.stocks = new LinkedHashMap<>();
+        this.isPremium = false;
     }
 
     public String getEmail() {
@@ -52,5 +54,11 @@ public class User {
         return accounts;
     }
 
+    public boolean isPremium() {
+        return isPremium;
+    }
 
+    public void setPremium(boolean premium) {
+        isPremium = premium;
+    }
 }

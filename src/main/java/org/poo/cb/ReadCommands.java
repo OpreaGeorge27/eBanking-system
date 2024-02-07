@@ -57,7 +57,11 @@ public class ReadCommands {
                         EBank.getInstance().transferMoney(parts[2], parts[3], parts[4], Float.valueOf(parts[5]));
                         break;
                     case "BUY":
-                        EBank.getInstance().buyStock(parts[2], parts[3], Float.valueOf(parts[4]));
+                        if (parts[1].equals("PREMIUM")) {
+                            EBank.getInstance().buyPremium(parts[2]);
+                        } else {
+                            EBank.getInstance().buyStock(parts[2], parts[3], Float.valueOf(parts[4]));
+                        }
                         break;
                     case "RECOMMEND":
                         EBank.getInstance().recommandStocks();
