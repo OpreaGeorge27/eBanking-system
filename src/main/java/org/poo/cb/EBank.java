@@ -113,7 +113,7 @@ public class EBank implements Bank {
 
 
     public void clearData(){
-        users.clear();
+        instance = null;
     }
 
 }
