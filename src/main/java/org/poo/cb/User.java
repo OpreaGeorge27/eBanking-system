@@ -10,8 +10,8 @@ public class User {
     private String name;
     private String address;
     private Map<String, User> friends;
-    private Map<AccountType,Account> accounts;
-    private Map<String,Stock> stocks;
+    private Map<AccountType, Account> accounts;
+    private Map<String, Stock> stocks;
 
 
     public User(String email, String firstName, String name, String address) {
@@ -51,8 +51,6 @@ public class User {
     public Map<AccountType, Account> getAccounts() {
         return accounts;
     }
-
-
 
 
 }

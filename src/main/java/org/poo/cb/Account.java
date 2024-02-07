@@ -4,17 +4,17 @@ public abstract class Account {
     private String currency;
     private double currentValue;
 
-    public Account(String currency){
+    public Account(String currency) {
         this.currency = currency;
     }
 
 
-    public void addMoney(Float amount){
-        this.currentValue+=amount;
+    public void addMoney(Float amount) {
+        this.currentValue += amount;
     }
 
-    public void subMoney(Float amount){
-        this.currentValue-=amount;
+    public void subMoney(Float amount) {
+        this.currentValue -= amount;
     }
 
     public String getCurrency() {

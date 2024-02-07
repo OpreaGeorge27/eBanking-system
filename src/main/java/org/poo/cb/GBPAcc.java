@@ -2,7 +2,7 @@ package org.poo.cb;
 
 public class GBPAcc extends Account {
 
-    public GBPAcc(){
+    public GBPAcc() {
         super("GBP");
     }
 }

@@ -28,11 +28,11 @@ public class ReadCSV {
                 Map<String, ExchangeRate> map = new HashMap<>();
 
                 for (int i = 1; i < parts.length; i++) {
-                    ExchangeRate exch = new ExchangeRate(parts[0],header[i],Float.valueOf(parts[i]));
+                    ExchangeRate exch = new ExchangeRate(parts[0], header[i], Float.valueOf(parts[i]));
                     map.put(header[i], exch);
                 }
 
-                ret.put(parts[0],map);
+                ret.put(parts[0], map);
             }
             EBank.getInstance().getExchanger().setExchanges(ret);
         } catch (IOException e) {
@@ -41,7 +41,7 @@ public class ReadCSV {
     }
 
     public void ReadStocks() {
-        try{
+        try {
             BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/" + stockfile));
             String line = reader.readLine();
             String[] header = line.split(",");
@@ -50,14 +50,13 @@ public class ReadCSV {
                 Map<String, Float> ret = new LinkedHashMap<>();
                 String[] parts = line.split(",");
                 for (int i = 1; i < parts.length; i++) {
-                    ret.put(header[i],Float.valueOf(parts[i]));
+                    ret.put(header[i], Float.valueOf(parts[i]));
                 }
-                Stock stock = new Stock(parts[0],ret,0);
-                stock.setLastPrice(Float.valueOf(parts[parts.length-1]));
-                EBank.getInstance().getForSaleStocks().put(parts[0],stock);
+                Stock stock = new Stock(parts[0], ret, 0);
+                stock.setLastPrice(Float.valueOf(parts[parts.length - 1]));
+                EBank.getInstance().getForSaleStocks().put(parts[0], stock);
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

@@ -8,17 +8,17 @@ public class Stock {
     private float amount;
     private float lastPrice;
 
-    public Stock(String name,Map<String, Float> history,float amount){
-        this.amount=amount;
-        this.name=name;
-        this.history= history;
+    public Stock(String name, Map<String, Float> history, float amount) {
+        this.amount = amount;
+        this.name = name;
+        this.history = history;
     }
 
-    public void setLastPrice(float lastPrice){
-        this.lastPrice=lastPrice;
+    public void setLastPrice(float lastPrice) {
+        this.lastPrice = lastPrice;
     }
 
-    public float getPrice(){
+    public float getPrice() {
         return lastPrice;
     }
 
@@ -27,7 +27,7 @@ public class Stock {
     }
 
     public int getAmount() {
-        return (int)amount;
+        return (int) amount;
     }
 
     public Map<String, Float> getHistory() {

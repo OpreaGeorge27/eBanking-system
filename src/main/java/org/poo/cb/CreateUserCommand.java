@@ -8,7 +8,7 @@ public class CreateUserCommand implements Command {
     private String name;
     private String address;
 
-    public CreateUserCommand(String email, String firstName, String name, String addr){
+    public CreateUserCommand(String email, String firstName, String name, String addr) {
         this.email = email;
         this.firstName = firstName;
         this.name = name;
@@ -17,10 +17,10 @@ public class CreateUserCommand implements Command {
 
     @Override
     public void execute() {
-        if(EBank.getInstance().getUsers().containsKey(email)){
+        if (EBank.getInstance().getUsers().containsKey(email)) {
             throw new IllegalArgumentException("User with " + email + " already exists");
         }
-        User user = new User(email,firstName,name,address);
+        User user = new User(email, firstName, name, address);
         EBank bank = EBank.getInstance();
         bank.addUser(user);
     }

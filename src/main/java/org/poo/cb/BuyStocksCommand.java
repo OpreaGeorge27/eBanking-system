@@ -17,10 +17,10 @@ public class BuyStocksCommand implements Command {
         Account acc = user.getAccounts().get(AccountType.valueOf("USD"));
         Stock stock = EBank.getInstance().getForSaleStocks().get(stockName);
         Float stockValue = stock.getPrice() * amount;
-        if(stockValue > acc.getCurrentValue()){
+        if (stockValue > acc.getCurrentValue()) {
             throw new IllegalArgumentException("Insufficient amount in account for buying stock");
         }
         acc.subMoney(stockValue);
-        user.getStocks().put(stockName,new Stock(stockName,stock.getHistory(),amount));
+        user.getStocks().put(stockName, new Stock(stockName, stock.getHistory(), amount));
     }
 }

@@ -45,7 +45,7 @@ public class EBank implements Bank {
         return JSONwriter;
     }
 
-    public Exchanger getExchanger(){
+    public Exchanger getExchanger() {
         return exchanger;
     }
 
@@ -71,48 +71,48 @@ public class EBank implements Bank {
         interact.executeCommand();
     }
 
-    public void addFriend(String email,String friend){
-        interact.setCommand(new AddFriendCommand(email,friend));
+    public void addFriend(String email, String friend) {
+        interact.setCommand(new AddFriendCommand(email, friend));
         interact.executeCommand();
     }
 
-    public void addAccount(String email, String curr){
-        interact.setCommand(new AddAccountCommand(email,curr));
+    public void addAccount(String email, String curr) {
+        interact.setCommand(new AddAccountCommand(email, curr));
         interact.executeCommand();
     }
 
-    public void addMoney(String email,String type,Float amount){
-        interact.setCommand(new AddMoneyCommand(email,type,amount));
+    public void addMoney(String email, String type, Float amount) {
+        interact.setCommand(new AddMoneyCommand(email, type, amount));
         interact.executeCommand();
     }
 
-    public void listPortofolio(String email){
+    public void listPortofolio(String email) {
         interact.setCommand(new ListPortofolioCommand(email));
         interact.executeCommand();
     }
 
-    public void exchangeMoney(String email,String currency1,String currency2,Float amount){
-        interact.setCommand(new ExchangeMoneyCommand(email,currency1,currency2,amount));
+    public void exchangeMoney(String email, String currency1, String currency2, Float amount) {
+        interact.setCommand(new ExchangeMoneyCommand(email, currency1, currency2, amount));
         interact.executeCommand();
     }
 
-    public void transferMoney(String email,String friend,String currency, float amount){
-        interact.setCommand(new TransferCommand(email,friend,currency,amount));
+    public void transferMoney(String email, String friend, String currency, float amount) {
+        interact.setCommand(new TransferCommand(email, friend, currency, amount));
         interact.executeCommand();
     }
 
-    public void buyStock(String email,String stockName,float amount){
-        interact.setCommand(new BuyStocksCommand(email,stockName,amount));
+    public void buyStock(String email, String stockName, float amount) {
+        interact.setCommand(new BuyStocksCommand(email, stockName, amount));
         interact.executeCommand();
     }
 
-    public void recommandStocks(){
+    public void recommandStocks() {
         interact.setCommand(new RecommandStocksCommand());
         interact.executeCommand();
     }
 
 
-    public void clearData(){
+    public void clearData() {
         instance = null;
     }
 

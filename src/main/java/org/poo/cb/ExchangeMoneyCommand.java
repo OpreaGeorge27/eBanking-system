@@ -16,15 +16,15 @@ public class ExchangeMoneyCommand implements Command {
     @Override
     public void execute() {
         User user = EBank.getInstance().getUsers().get(email);
-        Account  curr1Acc = user.getAccounts().get(AccountType.valueOf(curr1));
-        Account curr2Acc  = user.getAccounts().get(AccountType.valueOf(curr2));
-        if(curr1Acc.getCurrentValue() < amount){
-            System.out.println("Insufficient amount in account "+ curr1 +" for exchange");
+        Account curr1Acc = user.getAccounts().get(AccountType.valueOf(curr1));
+        Account curr2Acc = user.getAccounts().get(AccountType.valueOf(curr2));
+        if (curr1Acc.getCurrentValue() < amount) {
+            System.out.println("Insufficient amount in account " + curr1 + " for exchange");
         }
-        Float transfer = EBank.getInstance().getExchanger().getExchangeValue(curr1,curr2,amount);
+        Float transfer = EBank.getInstance().getExchanger().getExchangeValue(curr1, curr2, amount);
         curr2Acc.addMoney(amount);
-        if(curr1Acc.getCurrentValue()/2 < transfer){
-            curr1Acc.subMoney(0.01f*transfer);
+        if (curr1Acc.getCurrentValue() / 2 < transfer) {
+            curr1Acc.subMoney(0.01f * transfer);
             //aici nu stiu ce se intampla daca de exemplu clientul are 98EUR si transfera 98 nu e precizat in cerinta
         }
         curr1Acc.subMoney(transfer);

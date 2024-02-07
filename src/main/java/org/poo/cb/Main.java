@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args){
-        if(args == null) {
+    public static void main(String[] args) {
+        if (args == null) {
             System.out.println("Running Main");
             return;
         }
@@ -15,7 +15,7 @@ public class Main {
         String operations = args[2];
         EBank app = EBank.getInstance();
         app.clearData();
-        app.setPaths(exchangeRates,stocks,operations);
+        app.setPaths(exchangeRates, stocks, operations);
         ReadCommands readCommands = new ReadCommands(operations);
         readCommands.readAndExecute();
     }

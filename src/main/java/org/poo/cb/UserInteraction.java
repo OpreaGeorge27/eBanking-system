@@ -7,11 +7,10 @@ public class UserInteraction {
         this.command = command;
     }
 
-    public void executeCommand(){
-        try{
+    public void executeCommand() {
+        try {
             command.execute();
-        }
-        catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
     }

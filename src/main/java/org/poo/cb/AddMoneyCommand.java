@@ -5,7 +5,7 @@ public class AddMoneyCommand implements Command {
     private Float amount;
     private AccountType acc;
 
-    public AddMoneyCommand(String email, String accType, Float amount){
+    public AddMoneyCommand(String email, String accType, Float amount) {
         this.amount = amount;
         try {
             acc = AccountType.valueOf(accType);
