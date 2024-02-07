@@ -14,7 +14,7 @@ public class ReadCommands {
 
     public void readAndExecute() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("src\\main\\resources\\" + commandsPath));
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/" + commandsPath));
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(" ");
