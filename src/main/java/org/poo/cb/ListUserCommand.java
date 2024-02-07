@@ -16,6 +16,8 @@ public class ListUserCommand implements Command {
     public void execute() {
         Map<String, User> users = EBank.getInstance().getUsers();
         User user = users.get(email);
+        if(user == null)
+            throw new IllegalArgumentException("User with " + email +" doesn't exist");
         try{
             writer.printUser(user);
         }
