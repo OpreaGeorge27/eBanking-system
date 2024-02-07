@@ -19,7 +19,7 @@ public class ReadCSV {
 
     public void readConversions() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(convfile));
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/" + convfile));
             String line = reader.readLine();
             String[] header = line.split(",");
             Map<String, Map<String, ExchangeRate>> ret = new HashMap<>();
@@ -42,7 +42,7 @@ public class ReadCSV {
 
     public void ReadStocks() {
         try{
-            BufferedReader reader = new BufferedReader(new FileReader(stockfile));
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/" + stockfile));
             String line = reader.readLine();
             String[] header = line.split(",");
             Map<String, Stock> stocks = new HashMap<>();
