@@ -1,14 +1,7 @@
-{"stocks":[],"accounts":[{"currencyName":"USD","amount":"2000.00"}]}
-{"stocks":[],"accounts":[{"currencyName":"USD","amount":"1900.00"}]}
-{"email":"john.doe@email.com","firstname":"John","lastname":"Doe","address":"1401 Stoltenberg Islands Geralynstad SD 36945","friends":["marry.ville@email.com"]}
-{"stocks":[],"accounts":[{"currencyName":"USD","amount":"1900.00"}]}
-{"stocks":[],"accounts":[{"currencyName":"USD","amount":"900.00"}]}
-{"email":"marry.ville@email.com","firstname":"Marry","lastname":"Ville","address":"7376 Lemke Common Collierstad FL 87400","friends":["john.doe@email.com"]}
-{"stocks":[],"accounts":[{"currencyName":"USD","amount":"1000.00"}]}
-{"email":"john.doe@email.com","firstname":"John","lastname":"Doe","address":"1401 Stoltenberg Islands Geralynstad SD 36945","friends":["marry.ville@email.com"]}
-{"stocks":[],"accounts":[{"currencyName":"USD","amount":"1000.00"}]}
-{"email":"marry.ville@email.com","firstname":"Marry","lastname":"Ville","address":"7376 Lemke Common Collierstad FL 87400","friends":["john.doe@email.com"]}
-{"stocks":[],"accounts":[{"currencyName":"USD","amount":"1000.00"}]}
+{"stocks":[],"accounts":[{"currencyName":"USD","amount":"310.00"},{"currencyName":"EUR","amount":"1000.00"}]}
+{"stocks":[],"accounts":[{"currencyName":"USD","amount":"294.10"},{"currencyName":"EUR","amount":"1000.00"}]}
 {"stocksToBuy":["MSFT","NFLX","META","GOOGL","GOOG","NVDA","AMZN"]}
-{"stocks":[{"stockName":"AMZN","amount":3}],"accounts":[{"currencyName":"USD","amount":"557.74"}]}
-{"stocks":[{"stockName":"AMZN","amount":3}],"accounts":[{"currencyName":"USD","amount":"534.46"}]}
+{"stocks":[],"accounts":[{"currencyName":"USD","amount":"500.00"},{"currencyName":"EUR","amount":"1000.00"}]}
+{"stocks":[],"accounts":[{"currencyName":"USD","amount":"500.00"},{"currencyName":"EUR","amount":"1000.00"}]}
+{"stocks":[{"stockName":"AMZN","amount":1}],"accounts":[{"currencyName":"USD","amount":"352.58"},{"currencyName":"EUR","amount":"1000.00"}]}
+{"stocks":[{"stockName":"AMZN","amount":1}],"accounts":[{"currencyName":"USD","amount":"344.82"},{"currencyName":"EUR","amount":"1000.00"}]}

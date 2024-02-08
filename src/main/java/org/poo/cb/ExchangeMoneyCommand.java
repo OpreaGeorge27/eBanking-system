@@ -18,15 +18,18 @@ public class ExchangeMoneyCommand implements Command {
         User user = EBank.getInstance().getUsers().get(email);
         Account curr1Acc = user.getAccounts().get(AccountType.valueOf(curr1));
         Account curr2Acc = user.getAccounts().get(AccountType.valueOf(curr2));
-        if (curr1Acc.getCurrentValue() < amount) {
-            System.out.println("Insufficient amount in account " + curr1 + " for exchange");
-        }
         Float transfer = EBank.getInstance().getExchanger().getExchangeValue(curr1, curr2, amount);
-        curr2Acc.addMoney(amount);
-        if ((curr1Acc.getCurrentValue() / 2 < transfer) && !user.isPremium()) {
-            curr1Acc.subMoney(0.01f * transfer);
-            //aici nu stiu ce se intampla daca de exemplu clientul are 98EUR si transfera 98 nu e precizat in cerinta
+        if (curr1Acc.getCurrentValue() < transfer) {
+            throw new IllegalArgumentException("Insufficient amount in account " + curr1 + " for exchange");
         }
-        curr1Acc.subMoney(transfer);
+        curr2Acc.addMoney(amount);
+        if (((curr1Acc.getCurrentValue() / 2) < transfer) && !user.isPremium()) {
+            curr1Acc.subMoney(0.01f * transfer);
+            curr1Acc.subMoney(transfer);
+        }
+        else{
+            //pt premium scadem doar valoarea transferului
+            curr1Acc.subMoney(transfer);
+        }
     }
 }

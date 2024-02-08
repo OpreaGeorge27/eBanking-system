@@ -1,10 +1,9 @@
 package org.poo.cb;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class EBank implements Bank {
+public class EBank {
     //SINGLETON
     private static EBank instance;
     private Exchanger exchanger;
